@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/firebase-productos/static/css/main.f7e8af09.css",
+    "main.js": "/firebase-productos/static/js/main.e8ce4d97.js",
+    "index.html": "/firebase-productos/index.html",
+    "main.f7e8af09.css.map": "/firebase-productos/static/css/main.f7e8af09.css.map",
+    "main.e8ce4d97.js.map": "/firebase-productos/static/js/main.e8ce4d97.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f7e8af09.css",
+    "static/js/main.e8ce4d97.js"
+  ]
+}
