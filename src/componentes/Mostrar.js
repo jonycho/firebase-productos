@@ -72,7 +72,7 @@ const Mostrar = () => {
         <div className='row'>
             <div className='col'>
                 <div className='d-grid gap-2'>
-                    <Link to="/crearproducto" className='btn btn-dark btn-lg mt-3 mb-4 w-25' >Crear Nuevo Producto  <i className="fa-solid fa-plus"></i></Link>
+                    <Link to="/firebase-productos/crearproducto" className='btn btn-dark btn-lg mt-3 mb-4 w-25' >Crear Nuevo Producto  <i className="fa-solid fa-plus"></i></Link>
                 </div>
                 <table className='table table-dark table-hover'>
                     <thead>
@@ -96,7 +96,7 @@ const Mostrar = () => {
                                 <td key={produc.Precio} className='text-light'>$ {produc.Precio || ''}</td>
                                 <td key={produc.Stock} className='text-light'>{produc.Stock ? "si": "no" || ''} </td>
                                 <td>
-                                    <Link to={`/editarproducto/${produc.id}`} className="btn btn-light me-2"><i className="fa-solid fa-pen-to-square"></i></Link>
+                                    <Link to={`/firebase-productos/editarproducto/${produc.id}`} className="btn btn-light me-2"><i className="fa-solid fa-pen-to-square"></i></Link>
                                     <button onClick={()=>{confirmDelete(produc.id)}} className="btn btn-danger"><i className="fa-solid fa-trash "></i></button>
                                 </td>
                             </tr>

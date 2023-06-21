@@ -61,7 +61,7 @@ const update = async (e)=>{
     };
     await updateDoc(producto,data);
     alertaGuardado();
-    navigate("/");
+    navigate("/firebase-productos");
 }
 
 //5 asincronismo de existencia con la bd
