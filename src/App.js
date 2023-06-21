@@ -11,9 +11,9 @@ function App() {
     <div className="App">
        <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Mostrar/>}/>
-        <Route path='/crearproducto' element={<Crear />} />
-        <Route path='/editarproducto/:id' element={<Editar />} />
+        <Route path='/firebase-productos' element={<Mostrar/>}/>
+        <Route path='/firebase-productos/crearproducto' element={<Crear />} />
+        <Route path='/firebase-productos/editarproducto/:id' element={<Editar />} />
       </Routes>
     </BrowserRouter>
     </div>
