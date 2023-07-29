@@ -61,7 +61,7 @@ const update = async (e)=>{
     };
     await updateDoc(producto,data);
     alertaGuardado();
-    navigate("/firebase-productos");
+    navigate("/firebase-productos/mostrar");
 }
 
 //5 asincronismo de existencia con la bd
@@ -97,27 +97,28 @@ useEffect(()=>{
         <>
         {!loading ? 
         <div className='loading-icon'><img src="../imagenes/search.gif" alt='loading' /></div> :
-        <div className='container'>
+        <div className='container mt-2' style={{height:"80vh"}}>
         <div className='row'>
              <div className='col'>
 
-             <h1 className='mt-3 text-light'>Editar el Producto</h1>
+             <h2 className='mt-3 text-dark titulo-editar'>Editar el Producto</h2>
 
              <form onSubmit={update} className="mt-5">
-                <div className='mb-4'>
-                    <label className='form-label h3 text-light'>Modelo:</label>
+                <div className='mb-4 d-flex justify-content-between'>
+                    <label className='form-label h5 text-dark'>Modelo:</label>
                     <input 
                         name='Modelo'
                         value={form.Modelo}
                         type="text"
-                        className='form-control w-50 m-auto'
+                        className='form-control w-50'
                         onChange={cambio}
+                        required
                     />
                 </div>
 
-                <div className='mb-4'>
-                    <label className='form-label h3 text-light'>Precio:</label>
-                    <div className="input-group mb-3 w-50 m-auto">
+                <div className='mb-4 d-flex justify-content-between'>
+                    <label className='form-label h5 text-dark'>Precio:</label>
+                    <div className="input-group mb-3 w-50">
                         <span className="input-group-text">$</span>
                         <input
                             name="Precio"
@@ -125,28 +126,29 @@ useEffect(()=>{
                             type="text"
                             className='form-control'
                             onChange={cambio}
+                            required
                         />
                     </div>
                 </div>
 
-                <div className='mb-3'>
-                <label className='form-label h3 text-light'>Stock:</label>
-                <select name="Stock" value={form.Stock} onChange={cambio} className="form-select w-50 m-auto">
+                <div className='mb-3 d-flex justify-content-between'>
+                <label className='form-label h5 text-dark'>Stock:</label>
+                <select name="Stock" value={form.Stock} onChange={cambio} className="form-select w-50">
                     <option value="true">Si</option>
                     <option value="false">No</option>
                 </select>
                 </div>
 
-                <div className="mb-3 w-50 m-auto">
-                <label className='form-label h3 text-light'>Subir imagen</label><br />
+                <div className="mb-4 d-flex justify-content-between">
+                <label className='form-label h5 text-dark'>Subir imagen</label><br />
                 {
                     form.Imagen ?
                         <img width={100} src={form.Imagen} alt={form.Modelo} /> 
                     : ''}
-                <input name="Imagen" onChange={(e)=>setUrlImagen(e.target.files[0])} className="form-control mt-3" type="file" />
+                <input name="Imagen" onChange={(e)=>setUrlImagen(e.target.files[0])} className="form-control mt-3 w-50" type="file" />
                 </div>
 
-                <button type="submit" disabled={apretar ? true : false} className='btn btn-outline-light btn-lg my-3'>
+                <button type="submit" disabled={apretar ? true : false} className='btn btn-outline-dark btn-lg my-3'>
                     {apretar ? 'Cargando ...': 'Guardar'}
                 </button>
              

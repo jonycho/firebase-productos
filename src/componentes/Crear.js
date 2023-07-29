@@ -53,55 +53,57 @@ const Crear = () => {
         }
         
         alertCreacion()
-        navigate("/firebase-productos")
+        navigate("/firebase-productos/mostrar")
     }
 
 
     return (
-        <div className='container'>
+        <div className='container mt-2' style={{height:"80vh"}}>
         <div className='row'>
              <div className='col'>
 
-             <h1 className='mt-3 text-light'>Crear Producto Nuevo</h1>
+             <h2 className='mt-3 text-dark titulo-editar'>Crear Producto Nuevo</h2>
 
              <form onSubmit={nuevo} className='mt-5 '>
-                <div className='mb-4'>
-                    <label className='form-label h3 text-light'>Modelo:</label>
+                <div className='mb-4 d-flex justify-content-between'>
+                    <label className='form-label h5 text-dark'>Modelo:</label>
                     <input 
                         value={modelo}
                         type="text"
-                        className='form-control w-50 m-auto '
+                        className='form-control w-50'
                         onChange={(e)=>setModelo(e.target.value)}
+                        required
                     />
                 </div>
 
-                <div className='mb-4'>
-                <label className='form-label h3 text-light'>Precio:</label>
-                <div className="input-group mb-3 w-50 m-auto">
+                <div className='mb-4 d-flex justify-content-between'>
+                <label className='form-label h5 text-dark'>Precio:</label>
+                <div className="input-group mb-3 w-50">
                         <span className="input-group-text">$</span>
                         <input
                             value={precio}
                             type="text"
                             className='form-control'
                             onChange={(e)=>setPrecio(e.target.value)}
+                            required
                         />
                     </div>
                 </div>
 
-                <div className='mb-4'>
-                <label className='form-label h3 text-light'>Stock:</label>
-                <select value={stock} onChange={(e)=>setStock(e.target.value)} className="form-select w-50 m-auto" aria-label="Default select example">
+                <div className='mb-4 d-flex justify-content-between'>
+                <label className='form-label h5 text-dark'>Stock:</label>
+                <select value={stock} onChange={(e)=>setStock(e.target.value)} className="form-select w-50" aria-label="Default select example">
                     <option value="true">Si</option>
                     <option value="false">No</option>
                 </select>
                 </div>
 
-                <div className="mb-3 w-50 m-auto">
-                <label className='form-label h3 text-light'>Subir imagen</label>
-                <input onChange={(e)=>setUrlImagen(e.target.files[0])} className="form-control" type="file" />
+                <div className="mb-3 d-flex justify-content-between">
+                <label className='form-label h5 text-dark'>Subir imagen</label>
+                <input onChange={(e)=>setUrlImagen(e.target.files[0])} className="form-control w-50" type="file" />
                 </div>
 
-                <button type="submit" className='btn btn-outline-light btn-lg mt-3'>Agregar</button>
+                <button type="submit" className='btn btn-outline-dark btn-lg mt-3'>Agregar</button>
              
              </form>
              </div>
