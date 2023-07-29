@@ -14,11 +14,11 @@ function App() {
 
        
       <Routes>
-        <Route path="/firebase-productos" element={<NavBar />}>
-          <Route path='/firebase-productos/home' element={<Home/>}/>
-          <Route path='/firebase-productos/mostrar' element={<Mostrar/>}/>
-          <Route path='/firebase-productos/crearproducto' element={<Crear />} />
-          <Route path='/firebase-productos/editarproducto/:id' element={<Editar />} />
+        <Route path="/" element={<NavBar />}>
+          <Route path='/home' element={<Home/>}/>
+          <Route path='/mostrar' element={<Mostrar/>}/>
+          <Route path='/crearproducto' element={<Crear />} />
+          <Route path='/editarproducto/:id' element={<Editar />} />
         </Route>
       </Routes>
 
