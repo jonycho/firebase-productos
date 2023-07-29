@@ -53,7 +53,7 @@ const Crear = () => {
         }
         
         alertCreacion()
-        navigate("/firebase-productos/mostrar")
+        navigate("/mostrar")
     }
 
 
